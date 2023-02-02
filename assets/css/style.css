@@ -1,0 +1,160 @@
+:root{
+    --shadow: 4px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(45deg, rgb(182, 230, 142), rgb(217, 255, 0))
+}
+.project__title{
+    margin-bottom: 2rem;
+}
+.game__container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    min-width: 800px;
+
+    box-shadow: var(--shadow);
+}
+
+.card__players{
+    padding: 2rem 3rem;
+    width: 50%;
+    background-color: rgb(233, 223, 209);
+    text-align: center;
+    user-select: none;
+
+    transition: opacity 0.3s ease;
+}
+
+.card__title{
+    font-size: 2.5rem;
+    color: rgb(7, 18, 77);
+}
+
+.card__score{
+    font-size: 3.5rem;
+    color: rgb(6, 139, 6);
+    font-weight: 700;
+    margin: 1.5rem 0;
+}
+.card__currentScore{
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+.currentScore__title{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.currentScore__number{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1rem;
+}
+
+/*---Player 1----*/
+.card__playerOne{
+    background-color: rgb(214, 199, 228);
+    border-radius: 12px 0 0 12px;
+}
+.currentScore__playerOne{
+    background-color: rgb(161, 120, 199);
+    box-shadow: var(--shadow);
+}
+
+/*---Player 2----*/
+.card__playerTwo{
+    background-color: rgb(219, 169, 211);
+    border-radius: 0 12px 12px 0px;
+}
+.currentScore__playerTwo{
+    background-color: rgb(155, 96, 173);
+    box-shadow: var(--shadow);
+
+}
+
+
+/*---Buttons------------------------------*/
+.btn{
+    position: absolute;
+    background-color: rgb(221, 253, 253);
+    border: none;
+    border-radius: 15px;
+    color:black;
+    padding: 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    outline: none;
+
+
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover{
+    background-color: rgb(206, 204, 204);
+}
+
+.newGame__btn{
+    top: 5%;
+}
+.newGame__icon, .dice__icon{
+    font-size: 1.5rem;
+    vertical-align: baseline;
+    color: rgb(25, 25, 138);
+    
+    
+}
+.rollDice__btn{
+    top: 35%;
+    display: block; 
+}
+
+.hold__btn{
+    top: 52%;
+}
+
+
+
+.image__dice{
+    position: absolute;
+    top: 21%;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(250, 253, 255);
+   
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+
+
+
+/*---hidden CLASS--------*/
+.hidden{
+    display: none;
+}
+
+/*---active class--------*/
+.player--active{
+    opacity: 0.7
+}
+
+/*---win class-----------*/
+.player--win{
+    background-color: rgba(11, 199, 11, 0.781);
+    opacity: 1;
+}
